@@ -66,14 +66,14 @@ Enter an option:
 ![pfSense SNMP](./Images/pfsense-box-SNMP.PNG)
 
 ```console
-snmpwalk -v2c -c public 192.168.1.1 system
 SNMPv2-MIB::sysDescr.0 = STRING: pfSense pfSense.home.arpa 2.7.2-RELEASE FreeBSD 14.0-CURRENT amd64
 SNMPv2-MIB::sysObjectID.0 = OID: SNMPv2-SMI::enterprises.12325.1.1.2.1.1
-DISMAN-EVENT-MIB::sysUpTimeInstance = Timeticks: (896904) 2:29:29.04
-SNMPv2-MIB::sysContact.0 = STRING: Lukas Maly
+DISMAN-EVENT-MIB::sysUpTimeInstance = Timeticks: (60085) 0:10:00.85
+SNMPv2-MIB::sysContact.0 = STRING: maly.lukas@sposdk.cz
 SNMPv2-MIB::sysName.0 = STRING: pfSense.home.arpa
 SNMPv2-MIB::sysLocation.0 = STRING: Dvur Kralove
 SNMPv2-MIB::sysServices.0 = INTEGER: 76
+...
 ```
 
 Pro práci se SNMP Vám může být nápomocný tento článek - [Firewall pfSense: monitorování pomocí Zabbix a SNMP](https://www.root.cz/clanky/firewall-pfsense-monitorovani-pomoci-zabbix-a-snmp/), kde je mnoho věcí podrobně vysvětleno.
@@ -97,14 +97,14 @@ Seznam mnoha MIB souborů - [https://mibs.observium.org](https://mibs.observium.
 
 # Požadované známkované úkoly
 
-- Odlinkujte defaultní šablonu PFSense by SNMP pokud ji máte nalinkovanou.
-- Vytvořte vlastní clon šablony [PFSense by SNMP](https://git.zabbix.com/projects/ZBX/repos/zabbix/browse/templates/app/pfsense_snmp) ve které budete dělat změny a nalinkujte na hosta pfsense-box.
-- Vytvořte Grafy a Dashboardy v clonované sabloně např. 'Template PFSense by SNMP'. Dle vlastního uvážení.
-- V šabloně proveďte hromadné přidání tagu target s hodnotou pf na ty itemy, které jsou v MIBu BEGEMOT-PF-MIB, je jich tam více jak 10.
-- Takto upravenou šabonu vyexportujte v libovolném formátu (YAML, XML, JSON) a uložte do adresáře exports, který vytvoříte.
-- Pomocí snmpwalk získejte výpis systémových nastavení pfSense kde v SNMPv2-MIB::sysContact.0 = STRING: skolni.email@sposdk.cz, (Váš školní email) výpis bude v textovém souboru pfsense-box.txt ve Vašem projektu.
-- Vytvořte serii obrázků - snímků Zabbix GUI - Grafy pffense-box, Dashbord pfsense-box, ale i Dashbord Web GUI pfSense, Screenshoty přidejte do projektu do nějakého adresáře.
-- Do textoveho souboru NetgateID.txt vložte Vaše NID, které najdete na hlavní stránce pfSense - Netgate Device ID: 57aedd694474c9c3a678
-- Po dokončení a uložení všech změn do gitu, předejte do Teams URL Vašeho projektu na školním Githubu.
+- [] Odlinkujte defaultní šablonu PFSense by SNMP pokud ji máte nalinkovanou.
+- [] Vytvořte vlastní clon šablony [PFSense by SNMP](https://git.zabbix.com/projects/ZBX/repos/zabbix/browse/templates/app/pfsense_snmp) ve které budete dělat změny a nalinkujte na hosta pfsense-box.
+- [] Vytvořte Grafy a Dashboardy v clonované sabloně např. 'Template PFSense by SNMP'. Dle vlastního uvážení.
+- [] V šabloně proveďte hromadné přidání tagu target s hodnotou pf na ty itemy, které jsou v MIBu BEGEMOT-PF-MIB, je jich tam více jak 10.
+- [] Takto upravenou šabonu vyexportujte v libovolném formátu (YAML, XML, JSON) a uložte do adresáře exports, který vytvoříte.
+- [] Pomocí snmpwalk získejte výpis systémových nastavení pfSense kde v SNMPv2-MIB::sysContact.0 = STRING: skolni.email@sposdk.cz, (Váš školní email) výpis bude v textovém souboru pfsense-box.txt ve Vašem projektu.
+- [] Vytvořte serii obrázků - snímků Zabbix GUI - Grafy pffense-box, Dashbord pfsense-box, ale i Dashbord Web GUI pfSense, Screenshoty přidejte do projektu do nějakého adresáře.
+- [] Do textoveho souboru NetgateID.txt vložte Vaše NID, které najdete na hlavní stránce pfSense - Netgate Device ID: 57aedd694474c9c3a678
+- [] Po dokončení a uložení všech změn do gitu, předejte do Teams URL Vašeho projektu na školním Githubu.
 
 ...
